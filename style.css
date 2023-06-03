@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Roboto_400';
+    src: url('./font/Roboto-Regular.ttf');
+    src: url('./font/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto_700';
+    src: url('./font/Roboto-Bold.ttf');
+    src: url('./font/Roboto-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root {
+    --main_color: rgba(255, 255, 255, 1);
+    --hover_color: rgba(242, 101, 34, 1);
+    --font_400: Roboto_400;
+    --font_700: Roboto_700;
+}
+
+body {
+    background-image: url(./img/background.png);
+    background-size: cover;
+}
+
+.font {
+    text-decoration: none;
+    color: var(--main_color);
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.section_head {
+    padding-top: 51px;
+    padding-bottom: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_logo {
+    max-height: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+    column-gap: 8px;
+}
+
+.logo_picture {
+    width: 53px;
+    height: 47px;
+    object-fit: cover;
+}
+
+.logo_picture:nth-of-type(2) {
+    display: none;
+}
+
+.logo_sign_1 {
+    font-size: 29px;
+    font-family: var(--font_700);
+    text-transform: uppercase;
+}
+
+.logo_sign_2 {
+    font-size: 18px;
+    font-family: var(--font_700);
+    text-transform: uppercase;
+}
+
+.head_contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    row-gap: 19px;
+}
+
+.head_contacts {
+    font-size: 18px;
+    font-family: var(--font_400);
+}
+
+.head_logo:hover .logo_picture:nth-of-type(1) {
+    display: none;
+}
+
+.head_logo:hover .logo_picture:nth-of-type(2) {
+    display: block;
+}
+
+.head_logo:hover .logo_sign_1 {
+    color: var(--hover_color);
+}
+
+.head_logo:hover .logo_sign_2 {
+    color: var(--hover_color);
+}
+
+.contacts_mail:hover {
+    color: var(--hover_color);
+}
+
+.contacts_phone:hover {
+    color: var(--hover_color);
+}
+
+.section_tours {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 61px;
+    row-gap: 37px;
+}
+
+.container_tours {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.tours_picture{
+    max-width: 300px;
+    max-height: 220px;
+}
+
+.tours_picture_sign {
+    font-size: 18px;
+    font-family: var(--font_400);
+}
+
+.section_tours :hover .tours_picture_sign {
+    color: var(--hover_color);
+}
+
+.tours_picture_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, black, white) 1;
+}
+
+.frame_price {
+    max-width: 300px;
+    background-color: var(--hover_color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.container_tours:hover .frame_price {
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.price {
+    padding: 8px 0px 12px 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: left;
+}
+
+.price_sign {
+    font-family: var(--font_400);
+    font-size: 10px;
+}
+
+.price_value {
+    font-family: var(--font_400);
+    font-size: 20px;
+}
+
+.details {
+    padding-right: 14px;
+    line-height: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.details_price {
+    font-size: 14px;
+    font-family: var(--font_400);
+}
+
+.details_mark_img {
+    width: 5px;
+    height: 10px;
+}
+
+.copyright {
+    padding-top: 49px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--font_400);
+}
